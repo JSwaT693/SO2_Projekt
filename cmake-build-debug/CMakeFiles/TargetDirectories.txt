@@ -1,0 +1,3 @@
+C:/Users/jakub/Projects/Studia/Rok 3/Semestr 6/Systemy operacyjne 2/Projekt/Filozofowie/cmake-build-debug/CMakeFiles/Projekt.dir
+C:/Users/jakub/Projects/Studia/Rok 3/Semestr 6/Systemy operacyjne 2/Projekt/Filozofowie/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/jakub/Projects/Studia/Rok 3/Semestr 6/Systemy operacyjne 2/Projekt/Filozofowie/cmake-build-debug/CMakeFiles/rebuild_cache.dir
