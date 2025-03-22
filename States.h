@@ -8,6 +8,7 @@
 enum class States {
     EATING,
     THINKING,
+    HUNGRY,
     DEAD
 };
 

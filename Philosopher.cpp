@@ -12,6 +12,9 @@ Philosopher::Philosopher(int id) {
 
 void Philosopher::increaseHunger() {
     if (hunger < MAX_HUNGER - 1) {
+        if (hunger == 0) {
+            state = States::HUNGRY;
+        }
         hunger++;
     } else {
         state = States::DEAD;
