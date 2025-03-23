@@ -12,6 +12,8 @@ class Philosopher {
 public:
     explicit Philosopher(int id);
 
+    static const int MAX_HUNGER = 10; // Const variable; If hunger level goes equals it the philosopher dies
+
     void increaseHunger();
     void decreaseHunger();
     void eat();
@@ -25,8 +27,7 @@ public:
 private:
     int id;
     States state;
-    int hunger = 0;
-    const int MAX_HUNGER = 10;
+    int hunger;
 
 };
 

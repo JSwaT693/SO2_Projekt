@@ -4,18 +4,18 @@
 
 #include "Philosopher.h"
 
-Philosopher::Philosopher(int id) {
+Philosopher::Philosopher(int id) { // Parameters at the start
     this->id = id;
     state = States::THINKING;
     hunger = 0;
 }
 
 void Philosopher::increaseHunger() {
-    if (hunger < MAX_HUNGER - 1) {
-        if (hunger == 0) {
+    hunger++;
+    if (hunger < MAX_HUNGER) {
+        if (hunger == 1) {
             state = States::HUNGRY;
         }
-        hunger++;
     } else {
         state = States::DEAD;
     }
@@ -27,7 +27,6 @@ void Philosopher::decreaseHunger() {
 
 void Philosopher::eat() {
     state = States::EATING;
-    decreaseHunger();
 }
 
 void Philosopher::think() {
