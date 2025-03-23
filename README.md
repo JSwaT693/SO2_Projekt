@@ -1,6 +1,7 @@
 # SO2_Projekt
 
 1. Jak uruchomić program.
+
 Aby uruchomić program w cmd/powershell należy wejść w folder z projektem, następnie skompilować program używając komendy:
 
 - Na systemie Windows (przez WSL lub z zainstalowanym MinGW):
@@ -16,12 +17,17 @@ LUB jeśli na Windows nie działa to:
 ./<Nazwa_programu>.exe <ilość_filozofów> lub <Nazwa_programu>.exe <ilość_filozofów>
 
 2. Opis problemu jedzących filozofów.
+
 Problem Jedzących Filozofów jest klasycznym problemem synchronizacji w informatyce, zaproponowanym przez Edsgera Dijkstrę w 1965 roku. Jest to model problemu z zakresu współbieżności, który ilustruje konieczność stosowania mechanizmów synchronizacji, aby unikać zakleszczenia (deadlocka) lub zagłodzenia.
 Wizualizacja tego problemu to x filozofów siedzach przy jednym okrągłym stole. Obok każdego z nich znajdują się dwa widelce wspólne z jego sąsiadami. Każdy z nich ma trzy stany - myślenie, bycie głodnym lub jedzenie. Aby zjeść filozof potrzebuje dwa widelce. Po skończeniu jedzenia odkłada oba widelce i wraca do myślenia. Podstawowy problem polega na tym, aby uniknąć sytuacji, w której każdy filozof trzyma jeden widelec i czeka na drugi, co prowadzi do wiecznego blokowania oraz sytuacji, w której jeden z filozofów nigdy nie może zdobyć dwóch sztućców, ponieważ inni ciągle je odbierają.
 Ten problem jest przykładem bardziej ogólnego problemu zarządzania zasobami w systemach współbieżnych i jest używany jako standardowy test dla algorytmów synchronizacji w systemach operacyjnych i programowaniu wielowątkowym.
 
 3. Opis mojego rozwiązania.
+
 Moje rozwiązanie zostało zaimplementowane w języku C++ z wykorzystaniem wielowątkowości (std::thread) i mechanizmów synchronizacji (std::mutex).
+Każdy filozof zaczyna swoje działanie od myślenia, Następnie po losowym czasie od 2 do 4 sekund robi się głodny i próbuje podnieść sztućce. Filozofowie mają swój poziom głodu (hunger), który zwiększa się o 1 co 2 sekundy, jeśli nie udaje się im zdobyć sztućców, a także maksymalny głód zdefiniowany w Philosophers.cpp. Jeśli osiągną ten maksymalny głód to ich stan zmienia się na DEAD i nie wykonują już żadnych działań. Natomiast jeśli filozofowi uda się zdobyć sztućce to je tak długo aż jego hunger osiągnie 0 i zaczyna od nowa myśleć.
+
+ROZWIĄŻANIE GŁÓWNYCH PROBLEMÓW:
 
 Aby uniknąć deadlocka, zastosowałem asymetryczne podnoszenie sztućców:
 - Filozofowie o parzystych ID próbują najpierw podnieść lewy sztuciec, a potem prawy sztuciec.
