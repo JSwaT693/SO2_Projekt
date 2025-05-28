@@ -1,1 +1,0 @@
-CMakeLists.txt not found in C:\Users\jakub\Projects\Studia\Rok 3\Semestr 6\Systemy operacyjne 2\Projekt\Filozofowie Select CMakeLists.txt
