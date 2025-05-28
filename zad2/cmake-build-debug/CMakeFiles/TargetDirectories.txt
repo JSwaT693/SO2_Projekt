@@ -1,0 +1,4 @@
+C:/Users/jakub/Projects/Studia/Rok 3/Semestr 6/Systemy operacyjne 2/Projekt/Chat/cmake-build-debug/CMakeFiles/server.dir
+C:/Users/jakub/Projects/Studia/Rok 3/Semestr 6/Systemy operacyjne 2/Projekt/Chat/cmake-build-debug/CMakeFiles/client.dir
+C:/Users/jakub/Projects/Studia/Rok 3/Semestr 6/Systemy operacyjne 2/Projekt/Chat/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/jakub/Projects/Studia/Rok 3/Semestr 6/Systemy operacyjne 2/Projekt/Chat/cmake-build-debug/CMakeFiles/rebuild_cache.dir

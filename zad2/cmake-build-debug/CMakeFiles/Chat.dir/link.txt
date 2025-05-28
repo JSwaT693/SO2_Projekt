@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\Chat.dir/objects.a
+C:\msys64\ucrt64\bin\ar.exe qc CMakeFiles\Chat.dir/objects.a @CMakeFiles\Chat.dir\objects1.rsp
+C:\msys64\ucrt64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\Chat.dir/objects.a -Wl,--no-whole-archive -o Chat.exe -Wl,--out-implib,libChat.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Chat.dir\linkLibs.rsp
