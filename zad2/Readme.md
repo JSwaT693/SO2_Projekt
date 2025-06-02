@@ -25,6 +25,7 @@ Projekt został przetestowany w środowisku Windows i w pełni działa w termina
    - system operacyjny Windows
    - biblioteka WinSock2
    - kompilator C++17 lub nowszy
+   - PowerShell 7 lub inny terminal obsługujący ANSI
 
 ## Opis działania i problemów
 
