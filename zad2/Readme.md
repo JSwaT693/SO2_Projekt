@@ -66,7 +66,7 @@ Każda operacja na tych strukturach odbywa się wewnątrz bloku:
 ```cpp
 {
     std::lock_guard<std::mutex> lock(clients_mutex);
-    // bezpieczna operacja
+    // operacje na zasobach współdzielonych przez wątki
 }
 ```
 
@@ -78,7 +78,6 @@ W kliencie użytkownik może korzystać z następujących komend:
 
 - `/who` – wypisuje aktualnie podłączonych użytkowników
 - `/nick nowy_nick` – zmienia nick użytkownika i powiadamia o tym wszystkich
-- `/exit` – zamyka klienta i rozłącza się z serwerem
 
 Dodatkowo serwer automatycznie powiadamia wszystkich, gdy:
 - ktoś dołącza: `UżytkownikX has joined the chat.`
@@ -91,7 +90,6 @@ W celu poprawy czytelności komunikatów, klient koloruje teksty w konsoli za po
 
 - Zielony nick (`\033[32m`) – Twoje własne wiadomości
 - Żółty nick (`\033[33m`) – Wiadomości innych użytkowników
-- Niebieski (`\033[34m`) – komunikaty systemowe
 
 ## Historia wiadomości
 
